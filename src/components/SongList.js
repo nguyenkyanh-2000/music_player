@@ -49,7 +49,7 @@ export default function SongList() {
           marginBottom: "16px",
         }}
       >
-        Your playlist
+        Pick Your Poison
       </Typography>
       <FixedSizeList
         height={400}

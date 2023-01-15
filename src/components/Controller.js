@@ -5,6 +5,7 @@ import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
 import PauseCircleIcon from "@mui/icons-material/PauseCircle";
 import { Box } from "@mui/system";
 import { IconButton } from "@mui/material";
+import useMusicPlayer from "../hooks/useMusicPlayer";
 
 const style = {
   display: "flex",
@@ -18,20 +19,21 @@ const iconStyle = {
 };
 
 function Controller() {
-  const isPlaying = true;
+  const { isPlaying, togglePlay, playPreviousTrack, playNextTrack } =
+    useMusicPlayer();
   return (
     <Box sx={style}>
-      <IconButton>
+      <IconButton onClick={playPreviousTrack}>
         <SkipPreviousIcon sx={iconStyle} />
       </IconButton>
-      <IconButton>
-        {isPlaying ? (
+      <IconButton onClick={togglePlay}>
+        {!isPlaying ? (
           <PlayCircleIcon sx={iconStyle} />
         ) : (
           <PauseCircleIcon sx={iconStyle} />
         )}
       </IconButton>
-      <IconButton>
+      <IconButton onClick={playNextTrack}>
         <SkipNextIcon sx={iconStyle} />
       </IconButton>
     </Box>

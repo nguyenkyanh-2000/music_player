@@ -56,6 +56,12 @@ const useMusicPlayer = () => {
     currentTrackName:
       state.currentTrackIndex !== null &&
       state.tracks[state.currentTrackIndex].name,
+    currentTrackArtist:
+      state.currentTrackIndex !== null &&
+      state.tracks[state.currentTrackIndex].artist,
+    currentTrackImage:
+      state.currentTrackIndex !== null &&
+      state.tracks[state.currentTrackIndex].imageFile,
     trackList: state.tracks,
     isPlaying: state.isPlaying,
     currentTrackIndex: state.currentTrackIndex,
