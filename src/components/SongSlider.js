@@ -1,6 +1,5 @@
 import { LinearProgress, Typography } from "@mui/material";
 import { Box } from "@mui/material";
-import styled from "@emotion/styled";
 import React, { useState, useEffect, useRef } from "react";
 import { Stack } from "@mui/system";
 import useMusicPlayer from "../hooks/useMusicPlayer";
