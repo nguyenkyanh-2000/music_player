@@ -7,7 +7,6 @@ const useMusicPlayer = () => {
   // Play a specific track
   function playTrack(index) {
     if (index === state.currentTrackIndex) {
-      console.log(state.tracks[index].audioFile);
       togglePlay();
     } else {
       state.audioPlayer.pause();
@@ -19,10 +18,6 @@ const useMusicPlayer = () => {
         isPlaying: true,
       }));
     }
-    console.log(
-      state.currentTrackIndex !== null &&
-        state.tracks[state.currentTrackIndex].name
-    );
   }
 
   // Toggle play or pause
@@ -50,9 +45,23 @@ const useMusicPlayer = () => {
     playTrack(newIndex);
   }
 
+  /* Get the current song's duration
+  async function getTrackDuration() {
+    try {
+      state.audioPlayer.addEventListener("canplaythrough", () => {
+        console.log(Math.round(state.audioPlayer.duration));
+        return Math.round(state.audioPlayer.duration);
+      });
+    } catch (error) {
+      console.log("Error at getTrackDuration");
+    }
+  }
+  */
+
   return {
     playTrack,
     togglePlay,
+    currentAudioPlayer: state.audioPlayer,
     currentTrackName:
       state.currentTrackIndex !== null &&
       state.tracks[state.currentTrackIndex].name,

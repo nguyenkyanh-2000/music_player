@@ -8,9 +8,11 @@ import { IconButton } from "@mui/material";
 import useMusicPlayer from "../hooks/useMusicPlayer";
 
 const style = {
+  position: "relative",
   display: "flex",
   width: "100%",
   justifyContent: "space-around",
+  marginBottom: "24px",
 };
 
 const iconStyle = {

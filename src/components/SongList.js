@@ -15,7 +15,6 @@ const renderRow = (props) => {
     <ListItem component="div" key={index} style={style}>
       <ListItemButton
         onClick={() => {
-          console.log(index);
           play(index);
         }}
       >

@@ -15,7 +15,7 @@ const style = {
 
 function ControllerArea() {
   return (
-    <Stack direction="column" spacing={0} sx={style}>
+    <Stack direction="column" sx={style}>
       <SongInfo></SongInfo>
       <SongSlider></SongSlider>
       <Controller></Controller>

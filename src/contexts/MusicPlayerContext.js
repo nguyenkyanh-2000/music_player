@@ -61,7 +61,7 @@ const defaultValues = {
       audioFile: Track7,
       imageFile: Image7,
     },
-    { name: "Choose Your Song" },
+    { name: "" },
   ],
   currentTrackIndex: null,
   isPlaying: false,
@@ -69,6 +69,7 @@ const defaultValues = {
 
 const MusicPlayerProvider = ({ children }) => {
   const [state, setState] = useState(defaultValues);
+
   return (
     <MusicPlayerContext.Provider value={{ state, setState }}>
       {children}
