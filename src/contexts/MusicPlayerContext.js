@@ -61,7 +61,6 @@ const defaultValues = {
       audioFile: Track7,
       imageFile: Image7,
     },
-    { name: "" },
   ],
   currentTrackIndex: null,
   isPlaying: false,

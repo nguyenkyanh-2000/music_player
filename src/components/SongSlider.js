@@ -47,7 +47,7 @@ function SongSlider() {
           left: "16px",
         }}
       >
-        {elapsed === undefined ? "00:00" : elapsed}
+        {!elapsed ? "00:00" : elapsed}
       </Typography>
       <Box sx={{ width: "248px", p: 1, position: "absolute", right: "64px" }}>
         <LinearProgress
@@ -63,7 +63,7 @@ function SongSlider() {
           right: "16px",
         }}
       >
-        {duration === undefined ? "00:00" : duration}
+        {!duration ? "00:00" : duration}
       </Typography>
     </Stack>
   );
